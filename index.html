@@ -1,18 +1,166 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="使用 GitHub Pages 发布的公开示例网站">
-  <title>我的 GitHub Pages 网站</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Annoying Winter 是一个独立数字实验室，以艺术指导、交互与前端系统构建有重量的数字体验。">
+  <meta name="theme-color" content="#080b0f">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Annoying Winter: Pressure Makes Form">
+  <meta property="og:description" content="A cinematic material study in art direction, interaction and native WebGL2.">
+  <meta property="og:url" content="https://annoyingwinter.github.io/github-pages-starter/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://annoyingwinter.github.io/github-pages-starter/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/anek-latin-800-condensed.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/anek-latin-400.ttf" as="font" type="font/ttf" crossorigin>
+  <title>Annoying Winter: Pressure Makes Form</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <main class="card">
-    <p class="eyebrow">GitHub Pages</p>
-    <h1>网站已经上线。</h1>
-    <p class="lead">这是一个托管在 GitHub 上的公开静态网站。修改仓库里的文件并推送，页面就会自动更新。</p>
-    <a class="button" href="https://github.com/Annoyingwinter/github-pages-starter">查看源代码</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="scene" aria-hidden="true">
+    <canvas id="pressure-canvas"></canvas>
+    <div class="pressure-poster">
+      <i></i><i></i><i></i><i></i><i></i>
+    </div>
+    <div class="scene-shadow"></div>
+    <div class="scene-vignette"></div>
+    <div class="scene-scan"></div>
+  </div>
+
+  <header class="site-header">
+    <a class="wordmark" href="#cold" aria-label="Annoying Winter home">
+      <span>ANNOYING WINTER</span>
+      <small>DIGITAL MATERIAL LAB</small>
+    </a>
+
+    <nav class="site-nav" aria-label="Page navigation">
+      <a href="#field">Field</a>
+      <a href="#anatomy">Anatomy</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="source-link" href="https://github.com/Annoyingwinter/github-pages-starter" target="_blank" rel="noopener noreferrer">
+      Source <span aria-hidden="true">↗</span>
+    </a>
+  </header>
+
+  <div class="stage-status" aria-hidden="true">
+    <span class="stage-state">EDGE</span>
+    <i><b></b></i>
+    <span>PRESSURE FOLD / ACTIVE</span>
+  </div>
+
+  <main id="main-content">
+    <section class="chapter chapter--cold" id="cold" data-scene="edge" aria-labelledby="hero-title">
+      <div class="chapter-copy hero-copy">
+        <p class="hero-note">A SELF-INITIATED MATERIAL STUDY / NATIVE WEBGL2</p>
+        <h1 id="hero-title">
+          <span>PRESSURE</span>
+          <span>MAKES FORM.</span>
+        </h1>
+        <div class="hero-support">
+          <p lang="zh-CN">真正的形状，来自持续受力。</p>
+          <p>Annoying Winter works across art direction, interaction and frontend systems to make digital experiences hold their shape.</p>
+        </div>
+        <a class="chapter-link" href="#field">Inspect material <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <section class="chapter chapter--field" id="field" data-scene="fold" aria-labelledby="field-title">
+      <div class="chapter-copy field-copy">
+        <h2 id="field-title">CALM IS ONLY<br>AN UNTESTED STATE.</h2>
+        <p class="chapter-lead" lang="zh-CN">界面在被触摸、滚动与等待之前，只是一张平面。输入必须留下后果，材质必须给出回应。</p>
+        <dl class="material-spec">
+          <div><dt>Object</dt><dd>Pressure Fold</dd></div>
+          <div><dt>Medium</dt><dd>Native WebGL2</dd></div>
+          <div><dt>Status</dt><dd>Speculative R&amp;D</dd></div>
+          <div><dt>Input</dt><dd>Scroll + pointer</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="chapter chapter--impact" data-scene="stress" aria-labelledby="impact-title">
+      <div class="chapter-copy impact-copy">
+        <h2 id="impact-title"><span>BREAK</span><span>TO REVEAL.</span></h2>
+        <p lang="zh-CN">结构被压开，能力才变得可见。</p>
+      </div>
+    </section>
+
+    <section class="anatomy" id="anatomy" aria-labelledby="anatomy-title">
+      <h2 id="anatomy-title" class="sr-only">Pressure Fold anatomy</h2>
+
+      <nav class="material-modes" aria-label="Material viewing modes">
+        <button type="button" data-mode-target="surface" aria-controls="surface" aria-pressed="true">Surface</button>
+        <button type="button" data-mode-target="stress" aria-controls="stress" aria-pressed="false">Stress</button>
+        <button type="button" data-mode-target="structure" aria-controls="structure" aria-pressed="false">Structure</button>
+      </nav>
+
+      <section class="anatomy-step anatomy-step--surface" id="surface" data-scene="surface" aria-labelledby="surface-title">
+        <div class="anatomy-copy anatomy-copy--left">
+          <h3 id="surface-title">SHAPE FIRST.<br>STYLE FOLLOWS.</h3>
+          <p>Art direction starts with silhouette, tension and a single visual law. Color and detail arrive after the object can already be recognized in shadow.</p>
+        </div>
+      </section>
+
+      <section class="anatomy-step anatomy-step--stress" id="stress" data-scene="rupture" aria-labelledby="stress-title">
+        <div class="anatomy-copy anatomy-copy--right">
+          <h3 id="stress-title">INPUT LEAVES<br>A CONSEQUENCE.</h3>
+          <p>Pointer pressure dents the material. Scroll separates its layers. Recovery carries delay and weight, so feedback reads as a physical result instead of decoration.</p>
+        </div>
+      </section>
+
+      <section class="anatomy-step anatomy-step--structure" id="structure" data-scene="anatomy" aria-labelledby="structure-title">
+        <div class="anatomy-copy anatomy-copy--left">
+          <h3 id="structure-title">THE CUT EXPOSES<br>THE LOAD PATH.</h3>
+          <p>Five independently shaded shells, sealed edges and deterministic scene states turn one fold into a readable system across motion, input and fallback.</p>
+        </div>
+      </section>
+    </section>
+
+    <section class="chapter chapter--study" data-scene="study" aria-labelledby="study-title">
+      <div class="chapter-copy study-copy">
+        <h2 id="study-title">ONE OBJECT.<br>SEVEN STATES.<br><span>BUILT IN BROWSER.</span></h2>
+        <div class="study-notes">
+          <p>A procedural mesh with up to 118 × 40 cells, sealed boundary geometry and five independently shaded shells drives every frame.</p>
+          <p>Native WebGL2, self-hosted type and deterministic camera states ship as one static GitHub Pages build.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter chapter--method" id="method" data-scene="release" aria-labelledby="method-title">
+      <div class="chapter-copy method-copy">
+        <h2 id="method-title" class="sr-only">Working method</h2>
+        <div class="method-word"><span>Observe</span><p>Find the real tension before choosing a visual language.</p></div>
+        <div class="method-word"><span>Distort</span><p>Push one rule until a memorable form appears.</p></div>
+        <div class="method-word"><span>Build</span><p>Make the behavior real in the browser.</p></div>
+        <div class="method-word"><span>Tune</span><p>Refine the invisible details until the motion feels inevitable.</p></div>
+      </div>
+    </section>
+
+    <section class="chapter chapter--contact" id="contact" data-scene="rest" aria-labelledby="contact-title">
+      <div class="chapter-copy contact-copy">
+        <h2 id="contact-title">MAKE SOMETHING<br>THAT HOLDS.</h2>
+        <p lang="zh-CN">如果一个想法值得留下，它也值得承受压力。</p>
+        <a class="contact-link" href="https://github.com/Annoyingwinter" target="_blank" rel="noopener noreferrer">
+          Open GitHub <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <p>Designed and coded by Annoying Winter</p>
+    <p>China / 2026</p>
+    <a href="#cold">Return to pressure ↑</a>
+  </footer>
+
+  <noscript>
+    <p class="noscript-note" lang="zh-CN">JavaScript 已关闭。页面内容仍可阅读，材料场景以静态构图显示。</p>
+  </noscript>
 </body>
 </html>

@@ -1,0 +1,348 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-13T18:21:18.013Z",
+  "title": "Design System: Annoying Winter Pressure Fold",
+  "extensions": {
+    "colorMeta": {
+      "background": {
+        "role": "neutral",
+        "displayName": "Pressure Black",
+        "canonical": "oklch(10% 0.015 245)",
+        "tonalRamp": [
+          "oklch(15% 0.015 245)",
+          "oklch(26% 0.015 245)",
+          "oklch(38% 0.015 245)",
+          "oklch(50% 0.015 245)",
+          "oklch(62% 0.015 245)",
+          "oklch(74% 0.015 245)",
+          "oklch(86% 0.015 245)",
+          "oklch(95% 0.015 245)"
+        ]
+      },
+      "background-deep": {
+        "role": "neutral",
+        "displayName": "Chamber Black",
+        "canonical": "oklch(6% 0.012 245)",
+        "tonalRamp": [
+          "oklch(15% 0.012 245)",
+          "oklch(26% 0.012 245)",
+          "oklch(38% 0.012 245)",
+          "oklch(50% 0.012 245)",
+          "oklch(62% 0.012 245)",
+          "oklch(74% 0.012 245)",
+          "oklch(86% 0.012 245)",
+          "oklch(95% 0.012 245)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Cold White",
+        "canonical": "oklch(95% 0.006 235)",
+        "tonalRamp": [
+          "oklch(15% 0.006 235)",
+          "oklch(26% 0.006 235)",
+          "oklch(38% 0.006 235)",
+          "oklch(50% 0.006 235)",
+          "oklch(62% 0.006 235)",
+          "oklch(74% 0.006 235)",
+          "oklch(86% 0.006 235)",
+          "oklch(95% 0.006 235)"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Graphite Copy",
+        "canonical": "oklch(73% 0.018 235)",
+        "tonalRamp": [
+          "oklch(15% 0.018 235)",
+          "oklch(26% 0.018 235)",
+          "oklch(38% 0.018 235)",
+          "oklch(50% 0.018 235)",
+          "oklch(62% 0.018 235)",
+          "oklch(74% 0.018 235)",
+          "oklch(86% 0.018 235)",
+          "oklch(95% 0.018 235)"
+        ]
+      },
+      "ink-faint": {
+        "role": "neutral",
+        "displayName": "Instrument Gray",
+        "canonical": "oklch(64% 0.016 235)",
+        "tonalRamp": [
+          "oklch(15% 0.018 235)",
+          "oklch(26% 0.018 235)",
+          "oklch(38% 0.018 235)",
+          "oklch(50% 0.018 235)",
+          "oklch(62% 0.018 235)",
+          "oklch(74% 0.018 235)",
+          "oklch(86% 0.018 235)",
+          "oklch(95% 0.018 235)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Cut Line",
+        "canonical": "oklch(32% 0.022 235)",
+        "tonalRamp": [
+          "oklch(15% 0.022 235)",
+          "oklch(26% 0.022 235)",
+          "oklch(38% 0.022 235)",
+          "oklch(50% 0.022 235)",
+          "oklch(62% 0.022 235)",
+          "oklch(74% 0.022 235)",
+          "oklch(86% 0.022 235)",
+          "oklch(95% 0.022 235)"
+        ]
+      },
+      "signal": {
+        "role": "primary",
+        "displayName": "Sulfur Stress Signal",
+        "canonical": "oklch(88% 0.205 116)",
+        "tonalRamp": [
+          "oklch(15% 0.205 116)",
+          "oklch(26% 0.205 116)",
+          "oklch(38% 0.205 116)",
+          "oklch(50% 0.205 116)",
+          "oklch(62% 0.205 116)",
+          "oklch(74% 0.205 116)",
+          "oklch(86% 0.205 116)",
+          "oklch(95% 0.205 116)"
+        ]
+      },
+      "signal-ink": {
+        "role": "primary",
+        "displayName": "Compressed Signal Ink",
+        "canonical": "oklch(16% 0.04 118)",
+        "tonalRamp": [
+          "oklch(15% 0.04 118)",
+          "oklch(26% 0.04 118)",
+          "oklch(38% 0.04 118)",
+          "oklch(50% 0.04 118)",
+          "oklch(62% 0.04 118)",
+          "oklch(74% 0.04 118)",
+          "oklch(86% 0.04 118)",
+          "oklch(95% 0.04 118)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Compressed Display",
+        "purpose": "Hero, Impact, and Contact statements only."
+      },
+      "headline": {
+        "displayName": "Structural Headline",
+        "purpose": "Chapter and anatomy titles with authored line breaks."
+      },
+      "body": {
+        "displayName": "Material Explanation",
+        "purpose": "English and Chinese support copy held to readable line lengths."
+      },
+      "label": {
+        "displayName": "Instrument Label",
+        "purpose": "Navigation, modes, state readouts, and compact metadata."
+      }
+    },
+    "shadows": [
+      {
+        "name": "contact-legibility",
+        "value": "0 1px 16px var(--bg-deep)",
+        "purpose": "Keeps the final support sentence readable when the live material crosses behind it."
+      },
+      {
+        "name": "material-contact-field",
+        "value": "radial-gradient(ellipse 25% 8% at var(--shadow-x, 69%) 68%, oklch(2% 0.01 245 / 0.82), transparent 72%)",
+        "purpose": "Anchors Pressure Fold to the chamber and follows the camera target."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Primary response curve for copy, links, modes, and state changes."
+      },
+      {
+        "name": "state-fast",
+        "value": "180ms linear",
+        "purpose": "Zone color and scene-shadow state changes."
+      },
+      {
+        "name": "underline-draw",
+        "value": "240ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Navigation and source-link underline response."
+      },
+      {
+        "name": "canvas-crossfade",
+        "value": "700ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Transfers the scene from the static poster to the first successful WebGL frame."
+      },
+      {
+        "name": "method-shift",
+        "value": "500ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Moves the current method word while preserving readable defaults."
+      },
+      {
+        "name": "scan-pass",
+        "value": "12s linear infinite",
+        "purpose": "A single restrained reflection pass across the chamber; removed under reduced motion."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms, one iteration",
+        "purpose": "Collapses decorative animation and transition duration while preserving all content."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "nav-dock",
+        "value": "1024px"
+      },
+      {
+        "name": "mobile-composition",
+        "value": "768px"
+      },
+      {
+        "name": "webgl-mobile-camera",
+        "value": "700px"
+      },
+      {
+        "name": "compact-mobile",
+        "value": "480px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Wordmark",
+      "kind": "nav",
+      "refersTo": "navigation-link",
+      "description": "Two-level identity lockup for the fixed chamber header.",
+      "html": "<a class=\"ds-wordmark\" href=\"#\"><span>ANNOYING WINTER</span><small>DIGITAL MATERIAL LAB</small></a>",
+      "css": ".ds-wordmark { display: grid; width: fit-content; gap: .05rem; color: var(--ink, oklch(95% 0.006 235)); font-family: var(--font, sans-serif); font-size: .78rem; font-weight: 800; letter-spacing: .02em; line-height: 1; text-decoration: none; } .ds-wordmark small { color: var(--ink-faint, oklch(64% 0.016 235)); font-size: .52rem; font-weight: 400; letter-spacing: .14em; } .ds-wordmark:focus-visible { outline: 2px solid var(--signal, oklch(88% 0.205 116)); outline-offset: 5px; }"
+    },
+    {
+      "name": "Navigation Row",
+      "kind": "nav",
+      "refersTo": "navigation-link",
+      "description": "Transparent navigation with a directional one-pixel state line.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-link ds-nav-link-current\" href=\"#\">Field</a><a class=\"ds-nav-link\" href=\"#\">Anatomy</a><a class=\"ds-nav-link\" href=\"#\">Contact</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: clamp(1rem, 3vw, 2.75rem); } .ds-nav-link { position: relative; display: inline-flex; min-height: 2.75rem; align-items: flex-start; color: var(--ink-soft, oklch(73% 0.018 235)); font-family: var(--font, sans-serif); font-size: .7rem; letter-spacing: .06em; text-decoration: none; text-transform: uppercase; transition: color 180ms cubic-bezier(.16, 1, .3, 1); } .ds-nav-link::after { position: absolute; right: 0; bottom: .65rem; left: 0; height: 1px; background: currentColor; content: ''; transform: scaleX(0); transform-origin: right; transition: transform 240ms cubic-bezier(.16, 1, .3, 1); } .ds-nav-link:hover, .ds-nav-link:focus-visible, .ds-nav-link-current { color: var(--ink, oklch(95% 0.006 235)); } .ds-nav-link:hover::after, .ds-nav-link:focus-visible::after, .ds-nav-link-current::after { transform: scaleX(1); transform-origin: left; } .ds-nav-link:focus-visible { outline: 2px solid var(--signal, oklch(88% 0.205 116)); outline-offset: 5px; }"
+    },
+    {
+      "name": "Directional Action Link",
+      "kind": "button",
+      "refersTo": "action-link",
+      "description": "Primary inline action used to enter the material study and open the final contact path.",
+      "html": "<a class=\"ds-action\" href=\"#\">Inspect material <span aria-hidden=\"true\">↓</span></a>",
+      "css": ".ds-action { display: inline-flex; min-height: 3rem; width: fit-content; align-items: center; gap: 1.2rem; border-bottom: 1px solid currentColor; color: var(--ink, oklch(95% 0.006 235)); font-family: var(--font, sans-serif); font-size: .72rem; font-weight: 800; letter-spacing: .07em; text-decoration: none; text-transform: uppercase; transition: color 180ms cubic-bezier(.16, 1, .3, 1), gap 220ms cubic-bezier(.16, 1, .3, 1); } .ds-action:hover, .ds-action:focus-visible { gap: 1.7rem; color: var(--signal, oklch(88% 0.205 116)); } .ds-action:focus-visible { outline: 2px solid var(--signal, oklch(88% 0.205 116)); outline-offset: 5px; }"
+    },
+    {
+      "name": "Material Modes",
+      "kind": "button",
+      "refersTo": "material-mode",
+      "description": "Keyboard-operable Surface, Stress, and Structure selector.",
+      "html": "<div class=\"ds-modes\"><button class=\"ds-mode ds-mode-selected\" type=\"button\" aria-pressed=\"true\">Surface</button><button class=\"ds-mode\" type=\"button\" aria-pressed=\"false\">Stress</button><button class=\"ds-mode\" type=\"button\" aria-pressed=\"false\">Structure</button></div>",
+      "css": ".ds-modes { display: flex; gap: 1.6rem; } .ds-mode { position: relative; min-height: 2.75rem; padding: 0; border: 0; background: transparent; color: var(--ink-faint, oklch(64% 0.016 235)); cursor: pointer; font-family: var(--font, sans-serif); font-size: .68rem; letter-spacing: .07em; text-transform: uppercase; transition: color 180ms cubic-bezier(.16, 1, .3, 1); } .ds-mode::after { position: absolute; right: 0; bottom: .45rem; left: 0; height: 1px; background: var(--signal, oklch(88% 0.205 116)); content: ''; transform: scaleX(0); transform-origin: right; transition: transform 220ms cubic-bezier(.16, 1, .3, 1); } .ds-mode:hover, .ds-mode:focus-visible, .ds-mode-selected { color: var(--ink, oklch(95% 0.006 235)); } .ds-mode-selected::after { transform: scaleX(1); transform-origin: left; } .ds-mode:focus-visible { outline: 2px solid var(--signal, oklch(88% 0.205 116)); outline-offset: 5px; }"
+    },
+    {
+      "name": "Stage Status",
+      "kind": "custom",
+      "refersTo": "navigation-link",
+      "description": "Instrumentation line connecting narrative state to total page progress.",
+      "html": "<div class=\"ds-status\"><span>RUPTURE</span><i><b></b></i><span>PRESSURE FOLD / ACTIVE</span></div>",
+      "css": ".ds-status { display: grid; grid-template-columns: auto minmax(8rem, 1fr) auto; align-items: center; width: min(100%, 48rem); gap: 1rem; color: var(--ink, oklch(95% 0.006 235)); font-family: var(--font, sans-serif); font-size: .58rem; letter-spacing: .11em; text-transform: uppercase; } .ds-status > span:last-child { color: var(--ink-faint, oklch(64% 0.016 235)); text-align: right; } .ds-status i { position: relative; height: 1px; overflow: hidden; background: color-mix(in oklch, currentColor 22%, transparent); } .ds-status b { position: absolute; inset: 0; background: currentColor; transform: scaleX(.62); transform-origin: left; }"
+    },
+    {
+      "name": "Material Specification",
+      "kind": "custom",
+      "refersTo": "material-mode",
+      "description": "Open ruled definition list for project facts without a card container.",
+      "html": "<dl class=\"ds-spec\"><div><dt>Object</dt><dd>Pressure Fold</dd></div><div><dt>Medium</dt><dd>Native WebGL2</dd></div><div><dt>Status</dt><dd>Speculative R&amp;D</dd></div></dl>",
+      "css": ".ds-spec { display: grid; max-width: 34rem; margin: 0; border-top: 1px solid var(--line, oklch(32% 0.022 235)); font-family: var(--font, sans-serif); } .ds-spec > div { display: grid; grid-template-columns: .7fr 1fr; gap: 1rem; padding-block: .8rem; border-bottom: 1px solid var(--line, oklch(32% 0.022 235)); } .ds-spec dt { color: var(--ink-faint, oklch(64% 0.016 235)); font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; } .ds-spec dd { margin: 0; color: var(--ink, oklch(95% 0.006 235)); font-size: .78rem; font-weight: 800; letter-spacing: .03em; text-transform: uppercase; }"
+    },
+    {
+      "name": "Pressure Fold Poster",
+      "kind": "custom",
+      "refersTo": "action-link-hover",
+      "description": "Static five-layer fallback that preserves the signature silhouette without WebGL2.",
+      "html": "<div class=\"ds-fold\" aria-hidden=\"true\"><i></i><i></i><i></i><i></i><i></i></div>",
+      "css": ".ds-fold { position: relative; display: grid; place-items: center; width: min(70vw, 42rem); min-width: 18rem; height: 18rem; overflow: hidden; background: var(--bg, oklch(10% 0.015 245)); } .ds-fold i { position: absolute; width: 76%; height: 28%; background: oklch(18% 0.02 245); clip-path: polygon(0 28%, 18% 4%, 47% 18%, 67% 0, 100% 24%, 78% 72%, 54% 100%, 28% 80%, 4% 96%); transform: rotate(-12deg) translateY(-24px); } .ds-fold i:nth-child(2) { background: oklch(23% 0.035 270); transform: rotate(-9deg) translateY(-12px); } .ds-fold i:nth-child(3) { background: oklch(12% 0.02 245); transform: rotate(-6deg); } .ds-fold i:nth-child(4) { background: oklch(31% 0.035 245 / .72); transform: rotate(-3deg) translateY(12px); } .ds-fold i:nth-child(5) { height: 3px; background: var(--signal, oklch(88% 0.205 116)); clip-path: none; transform: rotate(-6deg); }"
+    },
+    {
+      "name": "Skip Link",
+      "kind": "button",
+      "refersTo": "skip-link",
+      "description": "High-contrast keyboard entry point to the main narrative.",
+      "html": "<a class=\"ds-skip\" href=\"#main\">跳到主要内容</a>",
+      "css": ".ds-skip { display: inline-flex; align-items: center; min-height: 2.75rem; padding: .75rem 1rem; background: var(--signal, oklch(88% 0.205 116)); color: var(--signal-ink, oklch(16% 0.04 118)); font-family: var(--font, sans-serif); font-size: .68rem; font-weight: 800; text-decoration: none; } .ds-skip:focus-visible { outline: 2px solid var(--ink, oklch(95% 0.006 235)); outline-offset: 5px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Pressure Chamber",
+    "overview": "Annoying Winter behaves like a low-temperature material test filmed as a silent title sequence. A single black-chrome composite fold occupies the fixed stage while the page moves through Edge, Fold, Stress, Rupture, Anatomy, Release, and Rest. Each chapter changes the same object's silhouette, camera, material response, or structural state, so the full scroll reads as one authored experiment.\n\nThe interface is visceral, cinematic, and exact. Deep blue-black space, cold white type, and one sulfur signal color create controlled tension. Sticky copy, hard tonal inversion, pointer pressure, deterministic scroll states, and restrained labels support the object without competing with it. The visual system rejects interchangeable portfolio templates, decorative UI chrome, invented proof, and borrowed MDX identity.",
+    "keyCharacteristics": [
+      "One persistent Pressure Fold object across the entire narrative, including a rendered five-layer anatomy cut.",
+      "One dark visual world with a single full-field sulfur impact.",
+      "Condensed display typography capped at 5.75rem with tight, readable spacing.",
+      "Open layouts built from sticky stages, ruled information, and controlled negative space.",
+      "Native WebGL2 as progressive enhancement, backed by a composed static poster.",
+      "Deterministic motion, keyboard-operable modes, reduced-motion cuts, and 320px support."
+    ],
+    "rules": [
+      {
+        "name": "The Escalation Rule",
+        "body": "Every fold must reveal a new property, increase tension, or resolve the previous state. A chapter that merely repeats the last composition is prohibited.",
+        "section": "overview"
+      },
+      {
+        "name": "The One Object Rule",
+        "body": "Pressure Fold carries the full experience. Additional spheres, blobs, or unrelated 3D toys are forbidden.",
+        "section": "overview"
+      },
+      {
+        "name": "The One Impact Rule",
+        "body": "The sulfur field may dominate one narrative interval only. Everywhere else it remains a seam, state, focus, or short emphasis.",
+        "section": "colors"
+      },
+      {
+        "name": "The Same-Hue Neutral Rule",
+        "body": "Supporting grays remain blue-tinted so they retain density on the dark field. Generic neutral gray is prohibited.",
+        "section": "colors"
+      },
+      {
+        "name": "The Compression Rule",
+        "body": "Display letter spacing stops at -0.03em. Tighter settings and oversized 96px-plus headlines are prohibited.",
+        "section": "typography"
+      },
+      {
+        "name": "The Unequal Languages Rule",
+        "body": "English and Chinese carry complementary information. Literal line-by-line duplication is prohibited.",
+        "section": "typography"
+      },
+      {
+        "name": "The Structural Depth Rule",
+        "body": "Geometry, occlusion, light, and camera position create depth. Decorative box shadows and default glass blur are forbidden.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do preserve one persistent Pressure Fold and make every state change readable in silhouette.",
+      "Do reserve the sulfur signal for stress, focus, selected states, decisive words, and one full-field Impact interval.",
+      "Do keep display type at or below 5.75rem with letter spacing no tighter than -0.03em.",
+      "Do use sticky stages, asymmetric placement, open ruled lists, and varied vertical pacing.",
+      "Do keep native HTML, CSS, JavaScript, WebGL2, self-hosted fonts, and relative GitHub Pages assets free of third-party runtime dependencies.",
+      "Do maintain visible focus, 44px or larger touch targets, semantic landmarks, reduced-motion behavior, static WebGL fallback, and legibility at 320px.",
+      "Do label speculative work honestly and keep client, award, testimonial, and performance claims verifiable."
+    ],
+    "donts": [
+      "Don't recreate generic AI portfolios built from a large grotesque headline, one particle sphere, orange-on-black, and repeated bordered panels.",
+      "Don't use repeated tiny uppercase section kickers, decorative 01/02/03 scaffolding, orbit diagrams, grid-paper backgrounds, or typography used as filler.",
+      "Don't ship a dark studio site that relies on glow, blur, or a single WebGL object while the rest of the page becomes static.",
+      "Don't invent clients, awards, testimonials, performance claims, or case-study metrics.",
+      "Don't fall back to safe editorial restraint, beige or cream themes, SaaS card grammar, stock-template transitions, or any composition that could be reproduced by changing only the logo.",
+      "Don't copy MDX layouts, wording, assets, models, brand identity, or HorizonX premium prompt text.",
+      "Don't add gradient text, decorative glassmorphism, identical card grids, wide soft card shadows, oversized corner radii, or universal fade-up reveals.",
+      "Don't hide essential content behind JavaScript, pointer precision, color alone, or successful WebGL initialization."
+    ]
+  }
+}
