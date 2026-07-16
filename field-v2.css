@@ -33,7 +33,7 @@ body{background:var(--paper);color:var(--ink)}
 .hero-frame--c{z-index:2;width:min(23vw,22rem);height:29vh;right:5vw;bottom:5vh;transform:rotate(5deg)}
 .hero__title{z-index:5;top:49%;left:var(--pad);right:var(--pad)}
 .eyebrow{width:max-content;margin:0 0 1.5rem;padding:.55rem .75rem;color:var(--paper);background:var(--signal);font-weight:800;letter-spacing:.12em}
-.hero h1{width:auto;font-family:"Songti SC","STSong","SimSun",serif;font-size:clamp(5.8rem,13.7vw,14rem);font-weight:400;line-height:.76;letter-spacing:-.095em;text-transform:none}
+.hero h1{width:auto;font-family:"Songti SC","STSong","SimSun",serif;font-size:clamp(5.8rem,12.7vw,13rem);font-weight:400;line-height:.9;letter-spacing:.018em;text-transform:none}
 .hero h1 span{white-space:nowrap}
 .hero h1 span:last-child{margin-left:8vw;color:var(--signal);-webkit-text-stroke:0}
 .hero h1 span:last-child::after{content:"";display:inline-block;width:.14em;height:.14em;margin-left:.05em;background:var(--ink);border-radius:50%;vertical-align:.12em}
@@ -47,35 +47,38 @@ body{background:var(--paper);color:var(--ink)}
 
 .manifesto{min-height:112vh;color:var(--paper);background:var(--ink)}
 .manifesto__meta{border-color:#f1eee466}
-.manifesto h2{font-family:"Songti SC","STSong",serif;font-size:clamp(4.2rem,11.5vw,12rem);font-weight:400;line-height:.82;letter-spacing:-.085em}
-.manifesto h2 em{color:var(--sun);font-size:.78em;font-style:normal}
+.manifesto h2{font-family:"Songti SC","STSong",serif;font-size:clamp(4.2rem,9.4vw,10.5rem);font-weight:400;line-height:1.04;letter-spacing:.025em}
+.manifesto h2 em{color:var(--sun);font-size:.78em;font-style:normal;letter-spacing:.025em}
 .manifesto>p{color:#d5d0c4}
 
 .practice-intro{padding:15vh var(--pad) 18vh;background:var(--paper)}
 .practice-intro__head{display:grid;grid-template-columns:1fr 3fr;gap:3vw;padding-top:1rem;border-top:1px solid var(--line)}
-.practice-intro__head h2{grid-column:2;margin:8vh 0 12vh;font-family:"Songti SC","STSong",serif;font-size:clamp(5rem,10vw,11rem);font-weight:400;line-height:.8;letter-spacing:-.085em}
+.practice-intro__head h2{grid-column:2;margin:8vh 0 12vh;font-family:"Songti SC","STSong",serif;font-size:clamp(4.5rem,7.6vw,9rem);font-weight:400;line-height:1.08;letter-spacing:.035em}
+.practice-intro__head h2 span{display:block;white-space:nowrap}
 .practice-intro__lead{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(2rem,6vw,7rem);margin:0 0 12vh 25%}
-.practice-intro__lead p{margin:0;font-size:clamp(1.05rem,1.5vw,1.35rem);line-height:1.65}
+.practice-intro__lead p{margin:0;font-size:clamp(1.05rem,1.5vw,1.35rem);line-height:1.8;letter-spacing:.055em}
 .practice-intro__lead p:first-child::first-letter{float:left;margin:.08em .12em 0 0;color:var(--signal);font-family:"Songti SC","STSong",serif;font-size:5.6em;line-height:.72}
 .practice-facts{display:grid;grid-template-columns:repeat(3,1fr);margin:0 0 14vh;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
 .practice-facts div{display:grid;grid-template-columns:auto 1fr;gap:1rem;padding:1.2rem 1rem}
 .practice-facts div+div{border-left:1px solid var(--ink)}
 .practice-facts dt{color:var(--signal);font-size:.62rem;font-weight:800;letter-spacing:.12em}
-.practice-facts dd{margin:0;text-align:right;font-size:.85rem;font-weight:800}
+.practice-facts dd{margin:0;text-align:right;font-size:.85rem;font-weight:800;letter-spacing:.06em}
 .visit-route{margin:0;padding:0;list-style:none;border-bottom:1px solid var(--ink)}
 .visit-route li{display:grid;grid-template-columns:minmax(12rem,1fr) minmax(20rem,1.7fr) minmax(16rem,1fr);gap:clamp(1.5rem,4vw,5rem);align-items:start;padding:3.2rem 1.2rem;border-top:1px solid var(--ink);transition:background .35s,color .35s}
 .visit-route li:hover{background:var(--sun)}
 .visit-route li:nth-child(2):hover{color:var(--paper);background:var(--signal)}
 .visit-route li:nth-child(3):hover{color:var(--paper);background:var(--blue)}
 .visit-route span{font-size:.65rem;font-weight:800;letter-spacing:.1em}
-.visit-route h3{margin:0;font-family:"Songti SC","STSong",serif;font-size:clamp(2rem,3.2vw,3.8rem);font-weight:400;line-height:1;letter-spacing:-.055em}
-.visit-route p{margin:0;font-size:.95rem;line-height:1.65}
-.practice-source{max-width:58rem;margin:3rem 0 0 auto;color:#6e685e;font-size:.72rem;line-height:1.7;text-align:right}
+.visit-route h3{margin:0;font-family:"Songti SC","STSong",serif;font-size:clamp(2rem,3vw,3.5rem);font-weight:400;line-height:1.18;letter-spacing:.035em}
+.visit-route p{margin:0;font-size:.95rem;line-height:1.8;letter-spacing:.045em}
+.practice-source{max-width:58rem;margin:3rem 0 0 auto;color:#6e685e;font-size:.72rem;line-height:1.7;letter-spacing:.025em;text-align:right}
 .practice-source a{margin-left:.25rem;color:var(--blue);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.18em}
 
 .field-sequence{color:var(--ink);background:var(--paper)}
 .sequence-copy{border-color:var(--line)}
-.sequence-copy h2,.chapter-head h2,.people-intro h2,.region-archive__head h2,.archive-head h2,.outro h2{font-family:"Songti SC","STSong",serif;font-weight:400;letter-spacing:-.085em}
+.sequence-copy h2,.chapter-head h2,.people-intro h2,.region-archive__head h2,.archive-head h2,.outro h2{font-family:"Songti SC","STSong",serif;font-size:clamp(4rem,6.3vw,8.2rem);font-weight:400;line-height:1.08;letter-spacing:.035em}
+.chapter-head h2 span,.people-intro h2 span,.archive-head h2 span{display:block;white-space:nowrap}
+.manifesto>p,.chapter-head>p,.people-intro>p,.archive-head>p{line-height:1.8;letter-spacing:.055em}
 .sequence-copy>p{color:#59544b}
 .sequence-card{padding:.7rem;background:var(--white);box-shadow:0 .8rem 2rem #41382822}
 .sequence-card img{filter:saturate(.85)}
@@ -101,18 +104,18 @@ body{background:var(--paper);color:var(--ink)}
 .people-card:nth-child(3n){transform:rotate(1deg)}
 blockquote{border-color:#1b191566}
 .practice-reflection{display:grid;grid-template-columns:minmax(0,2fr) minmax(16rem,1fr);gap:5vw;align-items:end;margin:22vh var(--pad) 0;padding:12vh 0 18vh;border-top:1px solid #1b191566}
-.practice-reflection p{margin:0;font-family:"Songti SC","STSong",serif;font-size:clamp(3.6rem,8vw,9rem);font-weight:400;line-height:.86;letter-spacing:-.07em}
-.practice-reflection span{font-size:1rem;line-height:1.65}
+.practice-reflection p{margin:0;font-family:"Songti SC","STSong",serif;font-size:clamp(3.6rem,7.2vw,8rem);font-weight:400;line-height:1.1;letter-spacing:.035em}
+.practice-reflection span{font-size:1rem;line-height:1.8;letter-spacing:.055em}
 
 .archive{color:var(--paper);background:var(--blue)}
 .archive-head{border-color:#f1eee475}
-.archive-head h2{font-size:clamp(4.6rem,8.7vw,9.6rem)}
+.archive-head h2{font-size:clamp(4rem,6.3vw,8.2rem)}
 .region-grid--archive .region-card{padding:.45rem;background:var(--paper);border:0}
 
 .outro{color:var(--paper);background:var(--ink)}
 .outro>p{color:var(--sun)}
-.outro h2{max-width:90%;font-size:clamp(6.5rem,18vw,20rem);line-height:.72;color:var(--paper)}
-.outro__summary{width:min(34rem,100%);margin:-6vh 0 8vh auto;color:#d5d0c4;font-size:1rem;line-height:1.65}
+.outro h2{max-width:90%;font-size:clamp(6.5rem,16vw,18rem);line-height:.96;letter-spacing:.035em;color:var(--paper)}
+.outro__summary{width:min(34rem,100%);margin:-6vh 0 8vh auto;color:#d5d0c4;font-size:1rem;line-height:1.8;letter-spacing:.055em}
 .outro__summary p{margin:0}
 .outro__links a{border-color:#f1eee499}
 
@@ -144,14 +147,14 @@ blockquote{border-color:#1b191566}
   .hero-frame--c{width:41vw;height:18vh;bottom:10vh}
   .hero__title{top:48%}
   .eyebrow{font-size:.52rem}
-  .hero h1{font-size:20vw;line-height:.82}
+  .hero h1{font-size:17vw;line-height:.96}
   .hero h1 span:last-child{margin-left:0}
   .hero__stamp{top:calc(100% + 1rem);transform:rotate(-2deg)}
   .hero__stamp b{font-size:1.8rem}
   .hero__foot{top:calc(100% + 5rem);font-size:.56rem}
-  .manifesto h2{font-size:18vw}
+  .manifesto h2{font-size:12.2vw}
   .practice-intro{padding-top:11vh}
-  .practice-intro__head h2{font-size:18vw}
+  .practice-intro__head h2{font-size:12.2vw}
   .practice-intro__lead{grid-template-columns:1fr;gap:2rem;margin-bottom:9vh}
   .practice-facts{grid-template-columns:1fr;margin-bottom:10vh}
   .practice-facts div+div{border-top:1px solid var(--ink);border-left:0}
@@ -159,10 +162,10 @@ blockquote{border-color:#1b191566}
   .visit-route li p{grid-column:1}
   .visit-route h3{font-size:10vw}
   .practice-source{text-align:left}
-  .sequence-copy h2,.chapter-head h2,.people-intro h2{font-size:18vw}
+  .sequence-copy h2,.chapter-head h2,.people-intro h2,.archive-head h2{font-size:12.2vw}
   .practice-reflection{grid-template-columns:1fr;gap:2rem;margin-top:14vh;padding:9vh 0 12vh}
-  .practice-reflection p{font-size:13vw}
-  .outro h2{font-size:22vw}
+  .practice-reflection p{font-size:11.5vw}
+  .outro h2{font-size:20vw}
   .outro__summary{margin:0 0 4rem}
 }
 
