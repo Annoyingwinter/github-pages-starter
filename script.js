@@ -4,24 +4,22 @@
   const items = Array.isArray(window.MEDIA_ITEMS) ? window.MEDIA_ITEMS : [];
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const labels = {
-    exterior: "室外 / OUTSIDE",
-    interior: "室内 / INSIDE",
-    group: "合照 / GROUP",
-    archive: "现场 / FIELD"
+    interior: "参访现场 / VISIT",
+    group: "同学们 / PEOPLE",
+    archive: "实践记录 / FIELD NOTES"
   };
-  const exteriorItems = items.filter((item) => item.category === "exterior");
+  const visibleItems = items.filter((item) => item.category !== "exterior");
   const interiorItems = items.filter((item) => item.category === "interior");
   const groupItems = items.filter((item) => item.category === "group");
   const archiveItems = items.filter((item) => item.category === "archive");
-  const exteriorSequence = exteriorItems.slice(0, 9).concat(exteriorItems.slice(-3));
   const interiorImages = interiorItems.filter((item) => item.type === "image");
   const interiorFeature = [4, 0, 12, 7, 17, 2, 19, 10].map((index) => interiorImages[index]).filter(Boolean);
 
   const $ = (selector, scope = document) => scope.querySelector(selector);
   const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
   const pad = (value) => String(value).padStart(3, "0");
-  const itemNumber = (item) => items.indexOf(item) + 1;
-  let activeItems = items;
+  const itemNumber = (item) => visibleItems.indexOf(item) + 1;
+  let activeItems = visibleItems;
   let lightboxIndex = 0;
   let ticking = false;
 
@@ -74,12 +72,6 @@
     return figure;
   }
 
-  function buildSequence() {
-    const track = $("[data-sequence='exterior']");
-    if (!track) return;
-    exteriorSequence.forEach((item) => track.append(mediaFigure(item, "sequence-card", true, exteriorItems)));
-  }
-
   function buildFeatures() {
     const inside = $("[data-feature='interior']");
     const people = $("[data-feature='people']");
@@ -100,14 +92,13 @@
 
   function buildRegionGrids() {
     const sources = {
-      exterior: exteriorItems.filter((item) => !exteriorSequence.includes(item)),
       interior: interiorItems.filter((item) => !interiorFeature.includes(item)),
       archive: archiveItems
     };
     $$('[data-region-grid]').forEach((grid) => {
       const category = grid.dataset.regionGrid;
       const source = sources[category] || [];
-      const completeChapter = category === "exterior" ? exteriorItems : category === "interior" ? interiorItems : archiveItems;
+      const completeChapter = category === "interior" ? interiorItems : archiveItems;
       source.forEach((item, index) => {
         grid.append(mediaFigure(item, `region-card ${regionClass(item, index)}`.trim(), true, completeChapter));
       });
@@ -195,18 +186,6 @@
       if (frameB) frameB.style.transform = `translate3d(0,${heroProgress * -12}vh,0) rotate(${-4 + heroProgress * 7}deg)`;
       if (frameC) frameC.style.transform = `translate3d(${heroProgress * -5}vw,${heroProgress * -6}vh,0) rotate(${7 - heroProgress * 8}deg)`;
 
-      const section = $(".field-sequence");
-      const track = $(".sequence-track");
-      const windowEl = $(".sequence-window");
-      if (section && track && windowEl && window.innerWidth > 900) {
-        const start = section.offsetTop;
-        const distance = section.offsetHeight - window.innerHeight;
-        const progress = Math.max(0, Math.min(1, (y - start) / Math.max(1, distance)));
-        const travel = Math.max(0, track.scrollWidth - windowEl.clientWidth + window.innerWidth * .08);
-        track.style.transform = `translate3d(${-progress * travel}px,0,0)`;
-        const current = Math.min(12, Math.floor(progress * 12) + 1);
-        $(".sequence-counter b").textContent = String(current).padStart(2, "0");
-      }
     }
     ticking = false;
   }
@@ -223,7 +202,7 @@
     const count = $(".boot__count");
     if (!boot || !count) return;
     if (reduceMotion) {
-      count.textContent = "100";
+      count.textContent = "072";
       boot.classList.add("is-done");
       return;
     }
@@ -231,7 +210,7 @@
     const duration = 850;
     function step(now) {
       const progress = Math.min(1, (now - start) / duration);
-      count.textContent = pad(Math.round(progress * 100));
+      count.textContent = pad(Math.round(progress * 72));
       if (progress < 1) requestAnimationFrame(step);
       else window.setTimeout(() => boot.classList.add("is-done"), 160);
     }
@@ -239,7 +218,6 @@
   }
 
   function init() {
-    buildSequence();
     buildFeatures();
     buildRegionGrids();
     setupLightbox();

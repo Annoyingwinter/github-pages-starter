@@ -1,99 +1,80 @@
-# FIELD / 100 — Production Master Prompt
+# 龙城科创社会实践 — Production Master Prompt
 
 ## 来源与边界
 
-这不是 Marcelo Design X、MDX 或 HorizonX 的私有提示词。公开资料中没有可核验的“最高级一键提示词”；相反，Marcelo 的公开内容明确反对把成熟网站包装成 “one prompt website”。下面是针对本项目原创的制作级总提示词：它吸收公开可见的方法论——意图、研究、镜头语言、动效节奏、界面清晰度、性能预算与设备降级——但不复制任何第三方布局、文案、品牌、资产、代码或付费内容。
+这不是 Marcelo Design X、MDX 或 HorizonX 的私有提示词。公开资料中没有可核验的“最高级一键提示词”。下面是针对本项目原创、并随本次内容调整后的制作提示词：它借鉴编辑叙事、镜头节奏、动效连续性和性能约束等公开方法，但不复制第三方布局、品牌、代码或付费内容。
 
 ## 总提示词
 
 ```text
-You are a coordinated production team: digital art director, documentary editor, interaction designer, type director, frontend engineer, accessibility specialist, and performance engineer.
+You are a coordinated production team: documentary editor, digital art director, interaction designer, frontend engineer, accessibility specialist, and fact checker.
 
-Design, implement, and verify FIELD / 100 for Annoying Winter: a cinematic, interactive field record built from exactly 100 supplied files. Treat the browser as an editorial sequence, not a gallery template. The finished site must feel authored from first frame to last interaction.
+Design, implement, and verify a static GitHub Pages record of Beijing University of Science and Technology students’ 2026 summer social practice in Changzhou. The result must explain where the students went, what they observed and did, and why the visit matters as social practice. Treat the browser as an editorial field record, not a gallery template.
 
-CORE THESIS
-“The future has a floorplan.”
-The experience moves from scale to evidence:
-1. arrive outside;
-2. enter the interior;
-3. turn toward people;
-4. move closer to participation.
+CORE PURPOSE
+Move from classroom concepts to real innovation sites. Show how students encountered new-engineering education, innovation platforms, hard-tech products, entrepreneurship, and technology transfer through visiting, listening, observing, experiencing, asking questions, and documenting.
 
-CONTENT CONTRACT — NON-NEGOTIABLE
-- Use every supplied file.
-- Keep the four source regions separate. Never combine all files into one master grid.
-- Exterior: 28 files. Use 12 for the horizontal arrival sequence and the remaining 16 for the exterior archive.
-- Interior: 39 files. Use 8 images for the spatial collage and the remaining 31 files for the interior archive.
-- Group: 10 files. Use all 10 only in the people chapter.
-- Field archive: 23 files. Use all 23 only in the final field-notes chapter.
-- A cover may preview up to three files without changing chapter ownership.
-- Do not invent names, partnerships, outcomes, awards, visitor quotes, or institutional claims.
+CONTENT CONTRACT
+- Structure the narrative around three visit clues: Longcheng Innovation College, China–Israel Changzhou Innovation Park, and XbotPark Robotics Base (Changzhou).
+- Introduce Longcheng Innovation College only with verified official information: it was formally established in 2024 and connects new-engineering education with industrial innovation through interdisciplinary and project-based practice.
+- Display 72 supplied files in three separate visual chapters:
+  1. Interior / visit spaces: 39 files.
+  2. Group / students: 10 files.
+  3. Field archive / participation details: 23 files.
+- Keep the 28 exterior files in the repository and data manifest, but do not render them in the current site.
+- Never combine all visible files into one master grid.
+- Do not invent a team name, exact visit date, partnership, outcome, award, personal quote, or institutional relationship.
+- Put official source links next to the institutional background text.
+
+EDITORIAL ARC
+1. Hero: establish social practice immediately with students and on-site evidence.
+2. Purpose: explain why the group left the classroom.
+3. Practice introduction: give a short college profile and a three-stop route.
+4. On site: show the college, exhibition and innovation spaces.
+5. People: show listening, observing, discussing and group presence.
+6. Field notes: move closer to products, demonstrations, operations and exchanges.
+7. Closing: return the questions and observations to future study and action.
 
 ART DIRECTION
-- Build one continuous editorial world with four distinct spatial fields, not four unrelated templates.
-- Opening: black cinematic field, layered photographic planes, oversized FIELD / 100 typography.
-- Thesis: ultramarine full-field interruption with one signal-orange line.
-- Exterior: black stage, wide horizontal camera movement, architecture shown through scale and distance.
-- Interior: warm mineral paper, dense but asymmetric collage, information becoming physical.
-- People: clean white field, long human strip, faces and body language taking visual priority.
-- Field notes: ultramarine archive, tighter crops and more immediate rhythm.
-- Ending: signal-orange memory frame, minimal actions, unmistakable closure.
-- Avoid generic cards, glass navigation, decorative grids, particles, blobs, orbit graphics, orange-on-black tech clichés, repeated 01/02/03 boxes, and universal fade-up reveals.
-
-TYPOGRAPHY
-- Use self-hosted Anek: 800 Condensed for display, 400 for navigation and body.
-- Pair English display type with concise Chinese writing.
-- Use scale, overlap, crop, and line breaks as editorial decisions.
-- Keep body copy readable at 320px and 200% zoom.
-- Never allow display text to cause horizontal document overflow.
+- Use the Daylight Practice Archive direction: warm paper, Chinese serif display type, signal red, sage, warm yellow and deep green.
+- Create visibly different regions for introduction, visit spaces, people and field notes.
+- Use editorial scale, asymmetry, crop and pacing; avoid a generic equal-card gallery.
+- Hero imagery may only use non-exterior files.
+- Pair concise English labels with plain, readable Chinese copy.
+- Preserve source identity, people, signage and color. Never retouch faces, generate replacements or fabricate scenes.
 
 MOTION AND INTERACTION
-- Treat scroll as editing: hold, reveal, travel, cut, settle.
-- On desktop, map native vertical scrolling to one horizontal exterior sequence; preserve direct control and reversible motion.
-- On mobile, replace scroll mapping with a native horizontal snap strip. Do not shrink the desktop scene.
-- Keep one primary motion event active at a time.
-- Use quartic/quintic ease-out behavior. No bounce or elastic easing.
-- Open every image or video in an accessible dialog.
-- Load original images and video sources only after user intent. Before that, show optimized previews or video posters.
-- Support Enter/Space on media, Escape to close, and arrow keys to move between items in the same region.
-- Respect prefers-reduced-motion: remove parallax, automatic drift, and scroll-linked transforms while preserving the narrative.
+- Treat scroll as editing: hold, reveal, move closer, settle.
+- Keep hero parallax limited and reversible.
+- Let the people strip drift slowly on desktop; replace it with native horizontal touch scrolling on mobile.
+- Open every visible image or video in an accessible dialog.
+- Load original images and video sources only after user intent; show optimized WebP previews beforehand.
+- Support Enter/Space, Escape and arrow-key navigation.
+- Respect prefers-reduced-motion by removing parallax and automatic drift.
 
-IMAGE AND VIDEO PRESERVATION
-- Preserve source identity, crop intent, people, architecture, signage, and color information.
-- Do not retouch faces, generate replacements, add logos, or fabricate scene content.
-- Thumbnail crops may be art-directed for rhythm; the dialog must expose the complete original file.
-- Every video must have a poster and must remain unloaded until opened.
+RESPONSIVE AND ACCESSIBLE
+- Validate 320, 390, 768, 1024, 1440 and 1920px widths.
+- Recompose large headings, three-stop rows and mosaics for small screens rather than shrinking the desktop scene.
+- Target WCAG 2.2 AA. Preserve semantic landmarks, one H1, logical H2 order, skip link, visible focus, keyboard operation, 44px touch targets and 200% zoom.
+- Core purpose, route and sources must remain readable if JavaScript fails.
+- Protect external links with noopener noreferrer and never inject untrusted HTML.
 
-PERFORMANCE BUDGET
-- Keep initial visual payload small by using WebP previews.
+PERFORMANCE
+- Use self-hosted fonts and WebP previews.
 - Lazy-load below-fold previews.
-- Keep original 100-file archive available without loading 100 originals at startup.
-- Avoid third-party runtimes, analytics, external fonts, and per-frame allocations.
-- Use passive scroll listeners and one requestAnimationFrame scroll update.
-- Pause or remove nonessential animation for hidden, mobile, and reduced-motion states.
-
-ACCESSIBILITY AND SECURITY
-- Target WCAG 2.2 AA.
-- Preserve semantic landmarks, one H1, logical H2 sequence, skip link, visible focus, keyboard operation, and at least 44px touch targets.
-- Use meaningful Chinese alt text derived from trusted local metadata.
-- Never insert external or user-provided strings with unsafe innerHTML.
-- Keep external links protected with noopener noreferrer.
-- Ensure core titles and narrative remain readable if JavaScript fails.
-
-RESPONSIVE ART DIRECTION
-- Validate 320, 390, 768, 1024, 1440, and 1920px widths plus mobile landscape.
-- Recompose image scale, headline size, spacing, and navigation per device.
-- Desktop exterior is cinematic horizontal travel; mobile exterior is touch-first snap browsing.
-- Large asymmetric mosaics become deliberate one/two-column sequences on small screens.
+- Keep exterior files unavailable to the rendered page, not merely visually hidden after loading.
+- Create video elements only after interaction.
+- Avoid third-party runtimes, analytics and per-frame allocations.
 
 VERIFICATION
-1. Confirm manifest contains exactly 100 unique original paths: 28 exterior, 39 interior, 10 group, 23 archive.
-2. Confirm every original, preview, and video poster exists.
-3. Confirm each file appears in exactly one content chapter; cover previews are decorative exceptions.
-4. Run JavaScript syntax checks and whitespace checks.
-5. Verify navigation anchors, dialog controls, keyboard paths, reduced motion, and missing-data fallback.
-6. Reject the release if all files are gathered in one place, any region is mixed with another, any original is missing, or videos preload before intent.
+1. Confirm the manifest still contains 100 unique originals: 28 exterior, 39 interior, 10 group and 23 archive.
+2. Confirm the rendered site exposes exactly 72 files and no exterior chapter or exterior hero image.
+3. Confirm every visible file stays in its own chapter and all paths exist.
+4. Confirm the practice introduction contains purpose, actions, three stops and official sources.
+5. Run JavaScript syntax, whitespace, link and asset checks.
+6. Verify desktop/mobile layout, keyboard paths, dialog behavior and reduced motion.
+7. Reject the release if exterior media appears, regions are mixed, claims are invented, or videos preload before intent.
 
 DELIVERABLE
-Return a complete static GitHub Pages build: index.html, styles.css, script.js, media data, optimized previews, original assets, documentation, and a reversible archive of the previous local version. A concept mockup, hero-only result, or unfinished media dump is not acceptable.
+Return a complete static GitHub Pages build with narrative HTML, editorial CSS, dependency-free JavaScript, retained source media, optimized previews, factual source links, updated documentation, and reversible Git history.
 ```
