@@ -1,166 +1,165 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="Annoying Winter 是一个独立数字实验室，以艺术指导、交互与前端系统构建有重量的数字体验。">
-  <meta name="theme-color" content="#080b0f">
-  <meta name="color-scheme" content="dark">
+  <meta name="description" content="FIELD / 100：一百个现场切片，记录建筑、系统与人如何共同构成创新发生的地方。">
+  <meta name="theme-color" content="#11120f">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Annoying Winter: Pressure Makes Form">
-  <meta property="og:description" content="A cinematic material study in art direction, interaction and native WebGL2.">
+  <meta property="og:title" content="FIELD / 100 — Annoying Winter">
+  <meta property="og:description" content="The future has a floorplan. 一部由 100 个真实素材构成的交互式现场纪录。">
   <meta property="og:url" content="https://annoyingwinter.github.io/github-pages-starter/">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://annoyingwinter.github.io/github-pages-starter/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/anek-latin-800-condensed.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/fonts/anek-latin-400.ttf" as="font" type="font/ttf" crossorigin>
-  <title>Annoying Winter: Pressure Makes Form</title>
+  <title>FIELD / 100 — Annoying Winter</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="media-data.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
 
-  <div class="scene" aria-hidden="true">
-    <canvas id="pressure-canvas"></canvas>
-    <div class="pressure-poster">
-      <i></i><i></i><i></i><i></i><i></i>
-    </div>
-    <div class="scene-shadow"></div>
-    <div class="scene-vignette"></div>
-    <div class="scene-scan"></div>
+  <div class="boot" aria-hidden="true">
+    <div class="boot__count">000</div>
+    <p>ASSEMBLING FIELD RECORD</p>
   </div>
 
   <header class="site-header">
-    <a class="wordmark" href="#cold" aria-label="Annoying Winter home">
-      <span>ANNOYING WINTER</span>
-      <small>DIGITAL MATERIAL LAB</small>
+    <a class="wordmark" href="#top" aria-label="返回开场">
+      <strong>AW</strong>
+      <span>FIELD RECORD<br>NO. 001</span>
     </a>
-
-    <nav class="site-nav" aria-label="Page navigation">
-      <a href="#field">Field</a>
-      <a href="#anatomy">Anatomy</a>
-      <a href="#contact">Contact</a>
+    <nav class="site-nav" aria-label="页面导航">
+      <a href="#outside">外部</a>
+      <a href="#inside">内部</a>
+      <a href="#people">人物</a>
+      <a href="#archive">参访现场</a>
     </nav>
-
-    <a class="source-link" href="https://github.com/Annoyingwinter/github-pages-starter" target="_blank" rel="noopener noreferrer">
-      Source <span aria-hidden="true">↗</span>
-    </a>
+    <div class="header-index" aria-label="100 个素材"><span>100</span> / FILES</div>
   </header>
 
-  <div class="stage-status" aria-hidden="true">
-    <span class="stage-state">EDGE</span>
-    <i><b></b></i>
-    <span>PRESSURE FOLD / ACTIVE</span>
-  </div>
+  <div class="scroll-meter" aria-hidden="true"><i></i></div>
 
   <main id="main-content">
-    <section class="chapter chapter--cold" id="cold" data-scene="edge" aria-labelledby="hero-title">
-      <div class="chapter-copy hero-copy">
-        <p class="hero-note">A SELF-INITIATED MATERIAL STUDY / NATIVE WEBGL2</p>
-        <h1 id="hero-title">
-          <span>PRESSURE</span>
-          <span>MAKES FORM.</span>
-        </h1>
-        <div class="hero-support">
-          <p lang="zh-CN">真正的形状，来自持续受力。</p>
-          <p>Annoying Winter works across art direction, interaction and frontend systems to make digital experiences hold their shape.</p>
-        </div>
-        <a class="chapter-link" href="#field">Inspect material <span aria-hidden="true">↓</span></a>
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__reel" aria-hidden="true">
+        <figure class="hero-frame hero-frame--a"><img src="assets/media/thumbs/exterior-024.webp" alt=""></figure>
+        <figure class="hero-frame hero-frame--b"><img src="assets/media/thumbs/interior-024.webp" alt=""></figure>
+        <figure class="hero-frame hero-frame--c"><img src="assets/media/thumbs/archive-016.webp" alt=""></figure>
       </div>
-    </section>
-
-    <section class="chapter chapter--field" id="field" data-scene="fold" aria-labelledby="field-title">
-      <div class="chapter-copy field-copy">
-        <h2 id="field-title">CALM IS ONLY<br>AN UNTESTED STATE.</h2>
-        <p class="chapter-lead" lang="zh-CN">界面在被触摸、滚动与等待之前，只是一张平面。输入必须留下后果，材质必须给出回应。</p>
-        <dl class="material-spec">
-          <div><dt>Object</dt><dd>Pressure Fold</dd></div>
-          <div><dt>Medium</dt><dd>Native WebGL2</dd></div>
-          <div><dt>Status</dt><dd>Speculative R&amp;D</dd></div>
-          <div><dt>Input</dt><dd>Scroll + pointer</dd></div>
-        </dl>
+      <div class="hero__wash" aria-hidden="true"></div>
+      <div class="hero__title">
+        <p class="eyebrow">CHANGZHOU · CHINA / JUL 2026</p>
+        <h1 id="hero-title"><span>FIELD</span><span><i>/</i> 100</span></h1>
+        <div class="hero__foot">
+          <p>一百个现场切片<br>建筑 · 系统 · 人</p>
+          <p lang="en">A FIELD NOTE<br>BUILT FROM EVIDENCE.</p>
+        </div>
       </div>
+      <a class="hero__enter" href="#manifesto">进入现场 <span aria-hidden="true">↓</span></a>
     </section>
 
-    <section class="chapter chapter--impact" data-scene="stress" aria-labelledby="impact-title">
-      <div class="chapter-copy impact-copy">
-        <h2 id="impact-title"><span>BREAK</span><span>TO REVEAL.</span></h2>
-        <p lang="zh-CN">结构被压开，能力才变得可见。</p>
+    <section class="manifesto" id="manifesto" aria-labelledby="manifesto-title">
+      <div class="manifesto__meta">
+        <span>THE THESIS</span>
+        <span>100 FILES / 04 CHAPTERS</span>
       </div>
+      <h2 id="manifesto-title">
+        <span>未来从来</span>
+        <span>不在远方。</span>
+        <em>IT HAS AN ADDRESS.</em>
+      </h2>
+      <p>它有入口、墙面、展台、走廊，也有一群正在观察、讨论与动手的人。向下滚动，穿过这次真实抵达。</p>
     </section>
 
-    <section class="anatomy" id="anatomy" aria-labelledby="anatomy-title">
-      <h2 id="anatomy-title" class="sr-only">Pressure Fold anatomy</h2>
-
-      <nav class="material-modes" aria-label="Material viewing modes">
-        <button type="button" data-mode-target="surface" aria-controls="surface" aria-pressed="true">Surface</button>
-        <button type="button" data-mode-target="stress" aria-controls="stress" aria-pressed="false">Stress</button>
-        <button type="button" data-mode-target="structure" aria-controls="structure" aria-pressed="false">Structure</button>
-      </nav>
-
-      <section class="anatomy-step anatomy-step--surface" id="surface" data-scene="surface" aria-labelledby="surface-title">
-        <div class="anatomy-copy anatomy-copy--left">
-          <h3 id="surface-title">SHAPE FIRST.<br>STYLE FOLLOWS.</h3>
-          <p>Art direction starts with silhouette, tension and a single visual law. Color and detail arrive after the object can already be recognized in shadow.</p>
+    <section class="field-sequence" id="outside" aria-labelledby="outside-title">
+      <div class="sequence-sticky">
+        <div class="sequence-copy">
+          <span class="chapter-mark">OUTSIDE / 01</span>
+          <h2 id="outside-title">先看见<br>它的尺度。</h2>
+          <p>建筑不是背景。它先决定人的速度、距离与期待。</p>
+          <span class="sequence-counter"><b>01</b> / 12</span>
         </div>
-      </section>
-
-      <section class="anatomy-step anatomy-step--stress" id="stress" data-scene="rupture" aria-labelledby="stress-title">
-        <div class="anatomy-copy anatomy-copy--right">
-          <h3 id="stress-title">INPUT LEAVES<br>A CONSEQUENCE.</h3>
-          <p>Pointer pressure dents the material. Scroll separates its layers. Recovery carries delay and weight, so feedback reads as a physical result instead of decoration.</p>
-        </div>
-      </section>
-
-      <section class="anatomy-step anatomy-step--structure" id="structure" data-scene="anatomy" aria-labelledby="structure-title">
-        <div class="anatomy-copy anatomy-copy--left">
-          <h3 id="structure-title">THE CUT EXPOSES<br>THE LOAD PATH.</h3>
-          <p>Five independently shaded shells, sealed edges and deterministic scene states turn one fold into a readable system across motion, input and fallback.</p>
-        </div>
-      </section>
-    </section>
-
-    <section class="chapter chapter--study" data-scene="study" aria-labelledby="study-title">
-      <div class="chapter-copy study-copy">
-        <h2 id="study-title">ONE OBJECT.<br>SEVEN STATES.<br><span>BUILT IN BROWSER.</span></h2>
-        <div class="study-notes">
-          <p>A procedural mesh with up to 118 × 40 cells, sealed boundary geometry and five independently shaded shells drives every frame.</p>
-          <p>Native WebGL2, self-hosted type and deterministic camera states ship as one static GitHub Pages build.</p>
+        <div class="sequence-window">
+          <div class="sequence-track" data-sequence="exterior"></div>
         </div>
       </div>
     </section>
 
-    <section class="chapter chapter--method" id="method" data-scene="release" aria-labelledby="method-title">
-      <div class="chapter-copy method-copy">
-        <h2 id="method-title" class="sr-only">Working method</h2>
-        <div class="method-word"><span>Observe</span><p>Find the real tension before choosing a visual language.</p></div>
-        <div class="method-word"><span>Distort</span><p>Push one rule until a memorable form appears.</p></div>
-        <div class="method-word"><span>Build</span><p>Make the behavior real in the browser.</p></div>
-        <div class="method-word"><span>Tune</span><p>Refine the invisible details until the motion feels inevitable.</p></div>
-      </div>
+    <section class="region-archive region-archive--outside" aria-labelledby="outside-archive-title">
+      <header class="region-archive__head">
+        <p>OUTSIDE ARCHIVE</p>
+        <h2 id="outside-archive-title">建筑外部<br><span>28 FILES</span></h2>
+        <p>从远景、立面到入口细节。前 12 件组成上方移动序列，其余影像在这里完成室外章节。</p>
+      </header>
+      <div class="region-grid" data-region-grid="exterior"></div>
     </section>
 
-    <section class="chapter chapter--contact" id="contact" data-scene="rest" aria-labelledby="contact-title">
-      <div class="chapter-copy contact-copy">
-        <h2 id="contact-title">MAKE SOMETHING<br>THAT HOLDS.</h2>
-        <p lang="zh-CN">如果一个想法值得留下，它也值得承受压力。</p>
-        <a class="contact-link" href="https://github.com/Annoyingwinter" target="_blank" rel="noopener noreferrer">
-          Open GitHub <span aria-hidden="true">↗</span>
-        </a>
+    <section class="inside" id="inside" aria-labelledby="inside-title">
+      <header class="chapter-head">
+        <span class="chapter-mark">INSIDE / 02</span>
+        <h2 id="inside-title">空间开始<br>解释自己。</h2>
+        <p>从墙上的方法论到桌面上的原型，信息不再抽象。</p>
+      </header>
+      <div class="inside-stage" data-feature="interior"></div>
+      <p class="inside-note">MOVE THROUGH THE SIGNALS — 视觉、装置、文字、材料在同一空间相遇。</p>
+      <div class="region-divider"><span>INSIDE ARCHIVE</span><span>39 FILES</span></div>
+      <div class="region-grid region-grid--inside" data-region-grid="interior"></div>
+    </section>
+
+    <section class="people" id="people" aria-labelledby="people-title">
+      <div class="people-intro">
+        <span class="chapter-mark">PEOPLE / 03</span>
+        <h2 id="people-title">最后，<br>镜头转向人。</h2>
+        <p>观看会变成提问，提问会变成动手。技术的真实尺度，始终是人。</p>
+      </div>
+      <div class="people-strip" data-feature="people" aria-label="人物与合照影像"></div>
+      <blockquote>
+        <p>“现场不是答案。<br>现场让问题变得更具体。”</p>
+      </blockquote>
+    </section>
+
+    <section class="archive" id="archive" aria-labelledby="archive-title">
+      <header class="archive-head">
+        <span class="chapter-mark">FIELD NOTES / 04</span>
+        <h2 id="archive-title">参访发生时，<br>镜头更靠近。</h2>
+        <p>23 件现场记录：观看、交流、操作、实验。它们不和建筑影像混排，而是作为最后一章独立展开。</p>
+      </header>
+      <div class="region-grid region-grid--archive" data-region-grid="archive"></div>
+    </section>
+
+    <section class="outro" id="contact" aria-labelledby="outro-title">
+      <p>END OF RECORD / START OF MEMORY</p>
+      <h2 id="outro-title">YOU WERE<br>HERE.</h2>
+      <div class="outro__links">
+        <a href="#top">重返开场 <span aria-hidden="true">↑</span></a>
+        <a href="https://github.com/Annoyingwinter/github-pages-starter" target="_blank" rel="noopener noreferrer">查看源代码 <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>Designed and coded by Annoying Winter</p>
-    <p>China / 2026</p>
-    <a href="#cold">Return to pressure ↑</a>
+    <p>ANNOYING WINTER / DIGITAL FIELD NOTE</p>
+    <p>BUILT FROM 100 ORIGINAL FILES · 2026</p>
   </footer>
 
-  <noscript>
-    <p class="noscript-note" lang="zh-CN">JavaScript 已关闭。页面内容仍可阅读，材料场景以静态构图显示。</p>
-  </noscript>
+  <dialog class="lightbox" aria-labelledby="lightbox-title">
+    <button class="lightbox__close" type="button" aria-label="关闭查看器">关闭 ×</button>
+    <div class="lightbox__stage"></div>
+    <div class="lightbox__meta">
+      <h2 id="lightbox-title">FIELD FILE</h2>
+      <p></p>
+      <div>
+        <button type="button" data-lightbox="prev" aria-label="上一个素材">←</button>
+        <span class="lightbox__index"></span>
+        <button type="button" data-lightbox="next" aria-label="下一个素材">→</button>
+      </div>
+    </div>
+  </dialog>
+
+  <noscript><p class="noscript">请启用 JavaScript 查看完整的 100 件素材档案。页面叙事与主要信息仍可阅读。</p></noscript>
 </body>
 </html>

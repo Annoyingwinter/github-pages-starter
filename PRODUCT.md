@@ -1,39 +1,40 @@
-# Product
+# FIELD / 100 — Product Brief
 
-## Register
+## 目标
 
-brand
+把 2026 年 7 月的一组园区、展陈、人物与参访素材转化为可公开浏览的现场纪录。访问者应在 3 秒内感到“这不是普通相册”，在完整滚动后理解一次抵达如何从建筑尺度逐步走向人的行动。
 
-## Users
+## 内容结构
 
-Potential collaborators, founders, design-led teams, creative developers, and visually literate peers arriving from GitHub, social media, or a shared link. They browse quickly, compare the work against award-level studio sites, and decide within seconds whether the maker has a distinctive point of view and the technical ability to execute it.
+素材按原始文件夹语义保持四区，禁止混排：
 
-## Product Purpose
+1. `exterior`：建筑外部，28 件。
+2. `interior`：建筑内部，39 件。
+3. `group`：人物合照，10 件。
+4. `archive`：参访现场，23 件。
 
-Annoying Winter is a personal digital-lab portfolio whose interface is itself the primary proof of capability. The site should create a visceral first impression, demonstrate art direction and frontend craft through real-time behavior, sustain visual tension across the full scroll, and give serious collaborators a clear path to continue. Success means the visitor remembers one unmistakable visual moment, understands the maker can combine design, motion, 3D/WebGL, and code, and wants to see or commission more.
+页面可以在同一区域内用重点画面与补充档案形成强弱节奏，但每件素材只属于自己的章节。开场可以引用少量画面作为预告，不计入章节档案。
 
-## Brand Personality
+## 体验原则
 
-Visceral, cinematic, exact. The voice is confident and concise, with the control of a title sequence and the physical tension of an engineered object. The emotional sequence is impact, curiosity, then trust.
+- 先叙事，后浏览；每一区都有独立空间和节奏。
+- 100 件原始素材全部可达，但不同时加载。
+- 视频默认只展示封面，用户打开后才加载源文件。
+- 点击任意素材进入沉浸查看器；键盘可前后切换并退出。
+- 桌面使用滚动剪辑，移动端改为原生横向滑动和独立排版。
+- reduced-motion 模式移除自动漂移和滚动变换。
 
-## Anti-references
+## 品牌与语气
 
-- Generic AI portfolios built from a large grotesque headline, one particle sphere, orange-on-black, and repeated bordered panels.
-- Repeated tiny uppercase section kickers, decorative 01/02/03 scaffolding, orbit diagrams, grid-paper backgrounds, and typography used as filler.
-- Dark studio sites that rely on glow, blur, or a single WebGL object while the rest of the page becomes static.
-- Fake clients, awards, testimonials, performance claims, or case-study metrics.
-- Safe editorial restraint, beige/cream fallback themes, SaaS card grammar, stock-template transitions, and any composition that could be reproduced by changing only the logo.
-- Direct copying of MDX layouts, wording, assets, models, or brand identity.
+品牌：Annoying Winter。
 
-## Design Principles
+项目名：FIELD / 100。
 
-1. **One unforgettable object.** Build the experience around a signature visual system whose behavior changes across the narrative, rather than adding unrelated effects section by section.
-2. **Every fold escalates.** Each transition must increase tension, reveal a new property, or reframe what came before; the page cannot peak in the hero and coast afterward.
-3. **Show the mechanism.** Prove design and engineering ability through real-time interaction, material response, and responsive choreography instead of claims.
-4. **Authored from edge to edge.** Typography, soundless rhythm, copy, cursor response, loading, navigation, and the final CTA belong to one coherent world.
-5. **Earn every effect.** Motion, light, blur, depth, and distortion must clarify hierarchy, strengthen memory, or reward interaction.
-6. **Stay honest.** Experiments may be speculative, but attribution, project status, and outcomes remain explicit.
+性格：现场、清醒、有尺度。文字短，不替素材发明故事，不虚构机构关系、成果、奖项或数据。
 
-## Accessibility & Inclusion
+## 性能与可访问性
 
-Target WCAG 2.2 AA for text and controls. Preserve semantic landmarks, logical heading order, visible keyboard focus, 44px touch targets, zoom support, and complete navigation without pointer precision. Provide a reduced-motion experience that preserves the narrative through cuts, opacity, and static compositions. Maintain legibility at 320px width, avoid color-only meaning, pause expensive rendering when hidden or offscreen, and keep primary content available if JavaScript or WebGL is unavailable.
+- HTML 中保留完整章节标题和叙事，即使脚本失败也能理解页面。
+- 使用 WebP 预览和延迟加载；原图/视频只在查看器中加载。
+- 保留 skip link、语义地标、可见焦点、键盘操作、44px 触控目标和缩放支持。
+- 目标为 WCAG 2.2 AA；所有动态效果提供 reduced-motion 路径。

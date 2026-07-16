@@ -1,17 +1,32 @@
-# Annoying Winter: Pressure Fold
+# FIELD / 100
 
-一个零构建、可直接部署到 GitHub Pages 的电影化数字材料实验。
+一部由 100 个真实素材构成的交互式现场纪录，直接部署于 GitHub Pages。
 
-网站围绕同一个 Pressure Fold 展开。原生 WebGL2 顶点与片元着色器生成黑铬复合折片，滚动依次驱动 Edge、Fold、Stress、Rupture、Anatomy、Release 和 Rest。指针会向材料施压，Anatomy 会切开外壳并渲染五层截面，章节负责改变镜头、受力、分层与重组。全页保持单一深色视觉系统，并在 Impact 章节出现一次完整的酸性黄绿色反转。
+新版把素材按内容严格分为四个连续章节，而不是集中堆成一个相册：
 
-## 技术构成
+- 建筑外部：28 件，12 件组成横向移动序列，其余 16 件构成室外档案。
+- 建筑内部：39 件，8 件构成主叙事拼贴，其余 31 件构成室内档案。
+- 人物合照：10 件，独立人物章节。
+- 参访现场：23 件，独立现场记录章节。
 
-- 原生 HTML、CSS 与 JavaScript，无构建步骤。
-- 原生 WebGL2、自定义网格、自定义 shader，无第三方运行时。
-- 单一固定 canvas，桌面与移动端使用独立几何密度、DPR 上限和相机修正。
-- 两个自托管 Anek Pressure 字重，配合中文系统字体回退。
-- CSS 静态 Pressure Fold poster，可覆盖无 WebGL、shader 失败与 context lost 场景。
-- 相对资源路径，可直接部署到 GitHub Pages 子路径。
+总计 72 张图片、28 个视频。所有原始文件都保留在 `assets/media/`；页面优先加载约 8.3 MB 的 WebP 预览图，只有打开查看器时才加载原始图片或视频。
+
+## 视觉方向
+
+`FIELD / 100` 把页面当作一部无声的现场纪录片：开场建立地点与尺度，随后依次穿过外部、内部、人物和参访现场。排版采用高压缩标题、非对称构图、滚动剪辑与四个清晰的色彩场域。视觉参考的是 MDX 公开表达的制作方法——镜头语言、叙事节奏、动效连续性与性能约束——没有复制其布局、品牌、代码或付费提示词。
+
+完整研究边界见 `DESIGN_PROMPT.md`，本版制作级总提示词见 `MASTER_PROMPT.md`。
+
+## 文件
+
+- `index.html`：语义结构、四个素材章节、灯箱与 SEO 元数据。
+- `styles.css`：视觉系统、章节构图、响应式与 reduced-motion 降级。
+- `script.js`：素材分区、横向滚动、分区画廊、筛选与原图/视频查看器。
+- `media-data.js`：100 个素材的浏览器数据清单。
+- `assets/media-manifest.json`：可读的素材元数据。
+- `assets/media/`：100 个原始文件、视频封面和 WebP 预览。
+
+旧版 Pressure Fold 已保存在本地 `_archive/pressure-fold-2026-07-16/`，并由 Git 忽略；仓库历史也可恢复旧版。
 
 ## 本地预览
 
@@ -21,47 +36,14 @@ py -m http.server 4173 --bind 127.0.0.1
 
 打开 `http://127.0.0.1:4173/`。
 
-## 交互与叙事
-
-- 滚动控制同一套确定性 scene state 与 11 组相机关键帧，回滚可以恢复对应状态。
-- 指针位置与压力影响折片旋转、镜头偏移和局部凹陷，反馈带有延迟恢复。
-- Surface、Stress、Structure 模式为原生按钮，支持键盘、焦点与 `aria-pressed`。
-- 章节状态条同步显示 Edge 到 Rest 的进程。
-- 页面隐藏时暂停渲染，连续慢帧会自动降低渲染分辨率。
-
-## 文件
-
-- `index.html`：语义结构、叙事内容、模式按钮与 SEO 元数据。
-- `styles.css`：OKLCH 视觉令牌、电影化长滚动构图、响应式布局和静态回退。
-- `script.js`：WebGL2 几何、shader、滚动镜头、指针压力、质量降级和上下文恢复。
-- `assets/fonts/`：自托管 Anek Pressure 字体。
-- `favicon.svg`：站点图标。
-- `PRODUCT.md`：受众、目标、品牌人格、反例和无障碍底线。
-- `DESIGN.md`：符合 DESIGN.md 规范的设计系统与机器可读令牌。
-- `.impeccable/design.json`：schemaVersion 2 设计 sidecar，包含动效、断点和组件预览。
-- `MASTER_PROMPT.md`：原创 Pressure Fold 母提示词与 92 分终审提示词。
-- `DESIGN_PROMPT.md`：MDX、HorizonX 公开研究与提示词来源边界。
-
-## 可访问性与降级
-
-- 目标为 WCAG 2.2 AA，保留 skip link、语义 landmarks、正确标题层级和清晰焦点。
-- 主要导航、正文动作链接与模式按钮在粗指针设备上至少为 48px，桌面端基础目标至少为 44px。
-- `prefers-reduced-motion` 会停用扫描循环，将滚动与状态切换收敛为即时更新。
-- JavaScript 关闭后，主要内容、项目说明和联系路径仍可阅读。
-- WebGL2 不可用时，五层 CSS poster 保持核心轮廓与构图。
-- 页面无表单和用户输入攻击面，外部新窗口链接使用 `noopener noreferrer`。
-
-## 部署
-
-推送到 `main` 后，GitHub Pages 会自动发布：
-
-https://annoyingwinter.github.io/github-pages-starter/
-
-部署前建议执行：
+## 部署前检查
 
 ```powershell
 node --check script.js
+node --check media-data.js
 git diff --check
 ```
 
-随后在 1440px、390px、320px、手机横屏、reduced-motion 和 WebGL-off 条件下完成浏览器验收。
+推送到 `main` 后由 GitHub Pages 发布：
+
+https://annoyingwinter.github.io/github-pages-starter/
