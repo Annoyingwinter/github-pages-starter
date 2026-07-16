@@ -55,6 +55,7 @@
 - 视频封面：`assets/media/posters/`。
 - 浏览器清单：`media-data.js`。
 - 可读清单：`assets/media-manifest.json`。
+- 社交分享封面：`assets/og-field-100.png`，1200×630。
 
 页面默认只请求预览；灯箱打开时才读取 `src` 原始文件。所有 `<video>` 都由交互后创建。
 

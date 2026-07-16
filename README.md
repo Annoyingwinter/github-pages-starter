@@ -25,6 +25,7 @@
 - `media-data.js`：100 个素材的浏览器数据清单。
 - `assets/media-manifest.json`：可读的素材元数据。
 - `assets/media/`：100 个原始文件、视频封面和 WebP 预览。
+- `assets/og-field-100.png`：1200×630 社交分享封面。
 
 旧版 Pressure Fold 已保存在本地 `_archive/pressure-fold-2026-07-16/`，并由 Git 忽略；仓库历史也可恢复旧版。
 
